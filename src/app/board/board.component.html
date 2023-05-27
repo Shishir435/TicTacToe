@@ -1,0 +1,20 @@
+
+
+<section>
+   
+     <header class="header">
+        <h1>Current Player: {{Player}}</h1>
+        <button  class="button-custom" (click)="newGame()">Start A new game</button>
+        <h2 *ngIf="winner">
+            player {{ winner}} won the game!
+        </h2>
+    </header>
+    
+    
+    <main>
+        <app-square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></app-square>
+    </main>
+   
+   
+</section>
+
